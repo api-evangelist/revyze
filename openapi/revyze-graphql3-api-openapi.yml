@@ -1,0 +1,30 @@
+openapi: 3.1.0
+info:
+  title: Fast Admin Graphql3 API
+  version: 0.1.0
+tags:
+- name: Graphql3
+paths:
+  /graphql3:
+    get:
+      summary: Graphql Explorer
+      operationId: graphql_explorer_graphql3_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+      tags:
+      - Graphql3
+    post:
+      summary: Graphql Server
+      operationId: graphql_server_graphql3_post
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+      tags:
+      - Graphql3

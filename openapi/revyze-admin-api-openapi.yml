@@ -1,0 +1,35 @@
+openapi: 3.1.0
+info:
+  title: Fast Admin API
+  version: 0.1.0
+tags:
+- name: Admin
+paths:
+  /admin/graphql:
+    post:
+      summary: Admin Graphql Server
+      operationId: admin_graphql_server_admin_graphql_post
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+      tags:
+      - Admin
+  /admin/api/token:
+    get:
+      summary: Admin Token
+      operationId: admin_token_admin_api_token_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                additionalProperties:
+                  type: string
+                type: object
+                title: Response Admin Token Admin Api Token Get
+      tags:
+      - Admin

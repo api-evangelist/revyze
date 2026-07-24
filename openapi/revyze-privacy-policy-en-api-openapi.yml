@@ -1,0 +1,19 @@
+openapi: 3.1.0
+info:
+  title: Fast Admin Privacy Policy En API
+  version: 0.1.0
+tags:
+- name: Privacy Policy En
+paths:
+  /privacy_policy_en:
+    get:
+      summary: Privacy Policy En
+      operationId: privacy_policy_en_privacy_policy_en_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+      tags:
+      - Privacy Policy En

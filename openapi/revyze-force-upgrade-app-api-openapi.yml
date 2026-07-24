@@ -1,0 +1,19 @@
+openapi: 3.1.0
+info:
+  title: Fast Admin Force Upgrade App API
+  version: 0.1.0
+tags:
+- name: Force Upgrade App
+paths:
+  /force_upgrade_app:
+    get:
+      summary: Check App Version
+      operationId: check_app_version_force_upgrade_app_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+      tags:
+      - Force Upgrade App
