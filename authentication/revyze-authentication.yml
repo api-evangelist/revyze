@@ -1,0 +1,16 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/revyze-openapi.json
+summary:
+  types: []
+  api_key_in: []
+  oauth2_flows: []
+  note: >-
+    The published OpenAPI (FastAPI, title "FastAPI", version 0.1.0) declares NO
+    components.securitySchemes and applies no security requirements to any
+    operation. This is the mobile app's own backend rather than a documented
+    developer API, so no public authentication model is published. Observed
+    endpoints imply app-internal auth that is not described in the spec: an
+    /admin/api/token endpoint and /admin/graphql suggest an admin token flow, and
+    the primary /graphql3 endpoint is consumed by the first-party mobile client.
+schemes: []

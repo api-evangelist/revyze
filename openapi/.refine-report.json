@@ -1,0 +1,32 @@
+{
+  "provider": "revyze",
+  "sources": [
+    "revyze-admin-api-openapi.yml",
+    "revyze-coach-api-openapi.yml",
+    "revyze-fastapi-api-openapi.yml",
+    "revyze-force-upgrade-app-api-openapi.yml",
+    "revyze-graphql3-api-openapi.yml",
+    "revyze-health-api-openapi.yml",
+    "revyze-multiplayer-api-openapi.yml",
+    "revyze-privacy-policy-api-openapi.yml",
+    "revyze-privacy-policy-en-api-openapi.yml",
+    "revyze-webhook-api-openapi.yml"
+  ],
+  "outputs": [
+    "revyze-admin-api-openapi.yml",
+    "revyze-coach-api-openapi.yml",
+    "revyze-fastapi-api-openapi.yml",
+    "revyze-force-upgrade-app-api-openapi.yml",
+    "revyze-graphql3-api-openapi.yml",
+    "revyze-health-api-openapi.yml",
+    "revyze-multiplayer-api-openapi.yml",
+    "revyze-privacy-policy-api-openapi.yml",
+    "revyze-privacy-policy-en-api-openapi.yml",
+    "revyze-webhook-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

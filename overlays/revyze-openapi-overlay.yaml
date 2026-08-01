@@ -1,0 +1,18 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Revyze
+  version: 1.0.0
+extends: openapi/revyze-openapi.json
+actions:
+- target: $.info
+  update:
+    x-apievangelist-note: >-
+      Harvested verbatim from https://api.revyze.fr/openapi.json. This is the
+      Revyze mobile app's own FastAPI backend (title "FastAPI", version 0.1.0),
+      not a documented public developer API. The primary data surface is the
+      GraphQL endpoint at POST /graphql3.
+    x-apievangelist-primary-interface: graphql
+    x-apievangelist-graphql-endpoint: https://api.revyze.fr/graphql3
+    x-apievangelist-webhooks: [/webhook/revenuecat, /webhook/nima]
+    x-apievangelist-vendor: Revyze
+    x-apievangelist-industry: EdTech

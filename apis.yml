@@ -1,22 +1,203 @@
 aid: revyze
+accessModel:
+  pricing: unknown
+  onboarding: open
+  trial: false
+  try_now: false
+  public: true
+  label: Open access
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/revyze.png
 name: Revyze
-description: Revyze is a company surfaced as a portfolio company of speedinvest and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Revyze is a French EdTech mobile learning application that helps secondary and
+  baccalaureate-level students revise by scrolling short-form educational videos
+  and playing quizzes created by a community of young content creators. The app
+  covers all school subjects and is oriented around exam preparation for the French
+  brevet and baccalaureate, reporting more than two million users, a 4.8/5 app-store
+  rating, and 15,000+ videos, all offered free of charge. Revyze is a portfolio
+  company of Speedinvest. This profile also captures the app's publicly reachable
+  backend at api.revyze.fr — a FastAPI service that fronts a GraphQL API, an AI
+  study-coach streaming endpoint, and subscription/content-moderation webhooks —
+  discovered and harvested by the API Evangelist enrichment pipeline. It is the
+  application's own backend rather than a documented public developer program.
 url: https://raw.githubusercontent.com/api-evangelist/revyze/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - speedinvest
-x-tier: stub
+x-tier: profiled
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- EdTech
+- Education
+- Mobile
+- Video
+- Learning
+- Quiz
+- France
+- GraphQL
+apis:
+- aid: revyze:revyze-admin-api
+  name: Revyze Admin API
+  description: The Admin API from Revyze — 2 operation(s) for admin.
+  humanURL: https://www.revyze.fr
+  baseURL: https://api.revyze.fr
+  tags:
+  - Admin
+  properties:
+  - type: OpenAPI
+    url: openapi/revyze-admin-api-openapi.yml
+  - type: GraphQL
+    url: https://api.revyze.fr/graphql3
+- aid: revyze:revyze-coach-api
+  name: Revyze Coach API
+  description: The Coach API from Revyze — 1 operation(s) for coach.
+  humanURL: https://www.revyze.fr
+  baseURL: https://api.revyze.fr
+  tags:
+  - Coach
+  properties:
+  - type: OpenAPI
+    url: openapi/revyze-coach-api-openapi.yml
+  - type: GraphQL
+    url: https://api.revyze.fr/graphql3
+- aid: revyze:revyze-fastapi-api
+  name: Revyze FastAPI API
+  description: The FastAPI API from Revyze — 1 operation(s) for fastapi.
+  humanURL: https://www.revyze.fr
+  baseURL: https://api.revyze.fr
+  tags:
+  - FastAPI
+  properties:
+  - type: OpenAPI
+    url: openapi/revyze-fastapi-api-openapi.yml
+  - type: GraphQL
+    url: https://api.revyze.fr/graphql3
+- aid: revyze:revyze-force-upgrade-app-api
+  name: Revyze Force Upgrade App API
+  description: The Force Upgrade App API from Revyze — 1 operation(s) for force upgrade app.
+  humanURL: https://www.revyze.fr
+  baseURL: https://api.revyze.fr
+  tags:
+  - Force Upgrade App
+  properties:
+  - type: OpenAPI
+    url: openapi/revyze-force-upgrade-app-api-openapi.yml
+  - type: GraphQL
+    url: https://api.revyze.fr/graphql3
+- aid: revyze:revyze-graphql3-api
+  name: Revyze Graphql3 API
+  description: The Graphql3 API from Revyze — 1 operation(s) for graphql3.
+  humanURL: https://www.revyze.fr
+  baseURL: https://api.revyze.fr
+  tags:
+  - Graphql3
+  properties:
+  - type: OpenAPI
+    url: openapi/revyze-graphql3-api-openapi.yml
+  - type: GraphQL
+    url: https://api.revyze.fr/graphql3
+- aid: revyze:revyze-health-api
+  name: Revyze Health API
+  description: The Health API from Revyze — 1 operation(s) for health.
+  humanURL: https://www.revyze.fr
+  baseURL: https://api.revyze.fr
+  tags:
+  - Health
+  properties:
+  - type: OpenAPI
+    url: openapi/revyze-health-api-openapi.yml
+  - type: GraphQL
+    url: https://api.revyze.fr/graphql3
+- aid: revyze:revyze-multiplayer-api
+  name: Revyze Multiplayer API
+  description: The Multiplayer API from Revyze — 1 operation(s) for multiplayer.
+  humanURL: https://www.revyze.fr
+  baseURL: https://api.revyze.fr
+  tags:
+  - Multiplayer
+  properties:
+  - type: OpenAPI
+    url: openapi/revyze-multiplayer-api-openapi.yml
+  - type: GraphQL
+    url: https://api.revyze.fr/graphql3
+- aid: revyze:revyze-privacy-policy-api
+  name: Revyze Privacy Policy API
+  description: The Privacy Policy API from Revyze — 1 operation(s) for privacy policy.
+  humanURL: https://www.revyze.fr
+  baseURL: https://api.revyze.fr
+  tags:
+  - Privacy Policy
+  properties:
+  - type: OpenAPI
+    url: openapi/revyze-privacy-policy-api-openapi.yml
+  - type: GraphQL
+    url: https://api.revyze.fr/graphql3
+- aid: revyze:revyze-privacy-policy-en-api
+  name: Revyze Privacy Policy En API
+  description: The Privacy Policy En API from Revyze — 1 operation(s) for privacy policy en.
+  humanURL: https://www.revyze.fr
+  baseURL: https://api.revyze.fr
+  tags:
+  - Privacy Policy En
+  properties:
+  - type: OpenAPI
+    url: openapi/revyze-privacy-policy-en-api-openapi.yml
+  - type: GraphQL
+    url: https://api.revyze.fr/graphql3
+- aid: revyze:revyze-webhook-api
+  name: Revyze Webhook API
+  description: The Webhook API from Revyze — 2 operation(s) for webhook.
+  humanURL: https://www.revyze.fr
+  baseURL: https://api.revyze.fr
+  tags:
+  - Webhook
+  properties:
+  - type: OpenAPI
+    url: openapi/revyze-webhook-api-openapi.yml
+  - type: GraphQL
+    url: https://api.revyze.fr/graphql3
+common:
+- type: Website
+  url: https://www.revyze.fr
+- type: PrivacyPolicy
+  url: https://api.revyze.fr/privacy_policy
+- type: TermsOfService
+  url: https://api.revyze.fr/privacy_policy
+- type: Webhooks
+  url: asyncapi/revyze-webhooks.yml
+- type: Authentication
+  url: authentication/revyze-authentication.yml
+- type: ErrorCatalog
+  url: errors/revyze-problem-types.yml
+- type: DataModel
+  url: data-model/revyze-data-model.yml
+- type: Conventions
+  url: conventions/revyze-conventions.yml
+- type: Overlay
+  url: overlays/revyze-openapi-overlay.yaml
+- type: WellKnown
+  url: well-known/revyze-well-known.yml
+- type: DomainSecurity
+  url: security/revyze-domain-security.yml
+- type: LLMsTxt
+  url: llms/revyze-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 10
+  pass: local-v1

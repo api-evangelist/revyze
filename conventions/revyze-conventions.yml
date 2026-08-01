@@ -1,0 +1,39 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/revyze-openapi.json
+authentication:
+  style: none-declared
+  note: >-
+    No securitySchemes in the OpenAPI. See authentication/revyze-authentication.yml.
+api_style:
+  primary: graphql
+  detail: >-
+    The main data API is GraphQL at POST /graphql3 (with a GET explorer). An
+    /admin/graphql surface exists for administration. A small set of REST utility
+    and webhook endpoints sit alongside.
+serialization: application/json
+idempotency:
+  supported: false
+  note: No Idempotency-Key header or idempotent-write contract is documented.
+pagination:
+  style: unknown
+  note: Pagination (if any) is handled inside GraphQL and not described in REST OpenAPI.
+error_envelope:
+  field: detail
+  format: fastapi-validation
+  ref: errors/revyze-problem-types.yml
+versioning:
+  scheme: none-declared
+  app_gate: >-
+    A GET /force_upgrade_app endpoint gates minimum mobile app versions, but the
+    HTTP API itself carries no version path or header.
+health:
+  endpoint: GET /health
+rate_limiting:
+  signaled: false
+  note: No rate-limit headers documented.
+cross_links:
+  errors: errors/revyze-problem-types.yml
+  authentication: authentication/revyze-authentication.yml
+  data_model: data-model/revyze-data-model.yml
+  webhooks: asyncapi/revyze-webhooks.yml

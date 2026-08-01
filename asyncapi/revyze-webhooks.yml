@@ -1,0 +1,22 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/revyze-openapi.json
+spec_type: Webhooks
+direction: inbound
+note: >-
+  The Revyze backend documents two inbound webhook receiver endpoints in its public
+  OpenAPI. These are consumed by Revyze (it receives events from third parties);
+  Revyze does not publish an outbound developer webhook subscription program or an
+  AsyncAPI document.
+webhooks:
+- name: RevenueCat subscription events
+  endpoint: POST /webhook/revenuecat
+  operationId: handle_revenuecat_events_webhook_revenuecat_post
+  payload_schema: RevenueCatWebhookPayload
+  provider: RevenueCat
+  event_types: [TEST, INITIAL_PURCHASE, NON_RENEWING_PURCHASE, RENEWAL, PRODUCT_CHANGE, CANCELLATION, BILLING_ISSUE, SUBSCRIBER_ALIAS, SUBSCRIPTION_PAUSED, UNCANCELLATION, TRANSFER, SUBSCRIPTION_EXTENDED, EXPIRATION, TEMPORARY_ENTITLEMENT_GRANT, INVOICE_ISSUANCE, VIRTUAL_CURRENCY_TRANSACTION, EXPERIMENT_ENROLLMENT]
+  purpose: In-app subscription lifecycle handling.
+- name: Content moderation (nima)
+  endpoint: POST /webhook/nima
+  operationId: delete_content_and_warn_user_route_webhook_nima_post
+  purpose: Delete flagged content and warn the associated user.

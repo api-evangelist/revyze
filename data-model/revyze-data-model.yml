@@ -1,0 +1,43 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/revyze-openapi.json
+note: >-
+  Derived from OpenAPI components.schemas. The core domain (users, videos, quizzes,
+  subjects) lives behind the GraphQL API (/graphql3) and is not described in the
+  REST OpenAPI, so only the REST/webhook request-response schemas are modeled here.
+entities:
+- name: RevenueCatWebhookPayload
+  role: Inbound RevenueCat subscription webhook envelope
+  fields_of_interest: [event]
+  relationships:
+  - type: has_one
+    target: RevenueCatEvent
+    via: event
+- name: RevenueCatEvent
+  role: A single RevenueCat subscription lifecycle event
+  enums:
+    type: RevenueCatEventType
+    store: RevenueCatStore
+    period_type: RevenueCatPeriodType
+    environment: RevenueCatEnvironment
+- name: CoachStreamInput
+  role: Input to the AI study-coach streaming endpoint (/coach/stream)
+  relationships:
+  - type: has_many
+    target: MaterialInput
+  enums:
+    material_type: CoachMaterialType
+- name: MaterialInput
+  role: Study material (IMAGE or PDF) supplied to the coach
+- name: DevtoolsCopyRequest
+  role: Multiplayer devtools copy request
+- name: HTTPValidationError
+  role: FastAPI 422 validation error envelope
+  relationships:
+  - type: has_many
+    target: ValidationError
+    via: detail
+enums:
+  RevenueCatEventType: [TEST, INITIAL_PURCHASE, NON_RENEWING_PURCHASE, RENEWAL, PRODUCT_CHANGE, CANCELLATION, BILLING_ISSUE, SUBSCRIBER_ALIAS, SUBSCRIPTION_PAUSED, UNCANCELLATION, TRANSFER, SUBSCRIPTION_EXTENDED, EXPIRATION, TEMPORARY_ENTITLEMENT_GRANT, INVOICE_ISSUANCE, VIRTUAL_CURRENCY_TRANSACTION, EXPERIMENT_ENROLLMENT]
+  RevenueCatStore: [AMAZON, APP_STORE, MAC_APP_STORE, PADDLE, PLAY_STORE, PROMOTIONAL, RC_BILLING, ROKU, STRIPE, TEST_STORE]
+  CoachMaterialType: [IMAGE, PDF]

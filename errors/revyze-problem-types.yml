@@ -1,0 +1,24 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/revyze-openapi.json
+format: fastapi-validation
+envelope:
+  field: detail
+  description: >-
+    Validation failures return HTTP 422 with an HTTPValidationError body — a JSON
+    object whose `detail` array lists per-field ValidationError items
+    (loc[], msg, type). This is the FastAPI/Pydantic default envelope, NOT
+    RFC 9457 application/problem+json.
+problems:
+- status: 422
+  title: Validation Error
+  schema: HTTPValidationError
+  media_type: application/json
+  source_operations:
+  - openapi/revyze-openapi.json#handle_revenuecat_events_webhook_revenuecat_post
+  - openapi/revyze-openapi.json#devtools_copy_multiplayer_devtools_copy_post
+  - openapi/revyze-openapi.json#coach_stream_coach_stream_post
+notes: >-
+  Only 422 is documented in the spec; 4xx/5xx application errors for the GraphQL
+  and admin surfaces are not described. No RFC 9457 problem+json responses are
+  published.
