@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Fast Admin Coach API",
+    "version": "0.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Coach",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Coach Stream",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/coach/stream",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Coach Stream"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

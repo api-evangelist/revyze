@@ -1,0 +1,40 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Fast Admin Graphql3 API",
+    "version": "0.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Graphql3",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Graphql Explorer",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/graphql3"
+          },
+          "docs": "Graphql Explorer"
+        },
+        {
+          "info": {
+            "name": "Graphql Server",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/graphql3"
+          },
+          "docs": "Graphql Server"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

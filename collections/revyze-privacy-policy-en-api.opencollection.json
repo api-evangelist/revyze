@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Fast Admin Privacy Policy En API",
+    "version": "0.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Privacy Policy En",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Privacy Policy En",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/privacy_policy_en"
+          },
+          "docs": "Privacy Policy En"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

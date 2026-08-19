@@ -1,0 +1,247 @@
+{
+  "item": [
+    {
+      "id": "36948ac1-f3b5-4234-9dc6-85741fcc16bd",
+      "name": "Webhook",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "193d9d51-bbb7-4071-b859-134e317c8f19",
+          "name": "Delete Content And Warn User Route",
+          "request": {
+            "name": "Delete Content And Warn User Route",
+            "description": {},
+            "url": {
+              "path": [
+                "webhook",
+                "nima"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "39617f9b-776c-487c-8841-8dab90185582",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "webhook",
+                    "nima"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "65fc603c-1235-4251-911b-41a82c055a3c",
+          "name": "Handle Revenuecat Events",
+          "request": {
+            "name": "Handle Revenuecat Events",
+            "description": {},
+            "url": {
+              "path": [
+                "webhook",
+                "revenuecat"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"event\": {\n    \"product_id\": \"<string>\",\n    \"period_type\": \"<string>\",\n    \"purchased_at_ms\": \"<integer>\",\n    \"environment\": \"<string>\",\n    \"transaction_id\": \"<string>\",\n    \"is_family_share\": \"<boolean>\",\n    \"country_code\": \"<string>\",\n    \"app_user_id\": \"<string>\",\n    \"currency\": \"<string>\",\n    \"price\": \"<number>\",\n    \"price_in_purchased_currency\": \"<number>\",\n    \"store\": \"<string>\",\n    \"takehome_percentage\": \"<number>\",\n    \"tax_percentage\": \"<number>\",\n    \"commission_percentage\": \"<number>\",\n    \"type\": \"<string>\",\n    \"expiration_at_ms\": \"<integer>\",\n    \"entitlement_ids\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"is_trial_conversion\": \"<boolean>\",\n    \"offer_code\": \"<string>\",\n    \"renewal_number\": \"<integer>\",\n    \"cancel_reason\": \"<string>\",\n    \"expiration_reason\": \"<string>\"\n  },\n  \"api_version\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "3cac32a0-8906-4418-994e-3fba941ee6c3",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "webhook",
+                    "revenuecat"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "key": "authorization",
+                    "value": "string",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"event\": {\n    \"product_id\": \"string\",\n    \"period_type\": \"NORMAL\",\n    \"purchased_at_ms\": 3212,\n    \"environment\": \"PRODUCTION\",\n    \"transaction_id\": \"string\",\n    \"is_family_share\": false,\n    \"country_code\": \"string\",\n    \"app_user_id\": \"string\",\n    \"currency\": \"string\",\n    \"price\": 1000.8590624102176,\n    \"price_in_purchased_currency\": 7292.830196107187,\n    \"store\": \"PLAY_STORE\",\n    \"takehome_percentage\": 8869.776721170148,\n    \"tax_percentage\": 5606.488030512338,\n    \"commission_percentage\": 8786.547288674903,\n    \"type\": \"PRODUCT_CHANGE\",\n    \"expiration_at_ms\": 7929,\n    \"entitlement_ids\": [\n      \"string\",\n      \"string\"\n    ],\n    \"is_trial_conversion\": true,\n    \"offer_code\": \"string\",\n    \"renewal_number\": 8932,\n    \"cancel_reason\": \"UNKNOWN\",\n    \"expiration_reason\": \"PRICE_INCREASE\"\n  },\n  \"api_version\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6ff1b124-0297-4d0f-b344-da901db494a1",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "webhook",
+                    "revenuecat"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "key": "authorization",
+                    "value": "string",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"event\": {\n    \"product_id\": \"string\",\n    \"period_type\": \"NORMAL\",\n    \"purchased_at_ms\": 3212,\n    \"environment\": \"PRODUCTION\",\n    \"transaction_id\": \"string\",\n    \"is_family_share\": false,\n    \"country_code\": \"string\",\n    \"app_user_id\": \"string\",\n    \"currency\": \"string\",\n    \"price\": 1000.8590624102176,\n    \"price_in_purchased_currency\": 7292.830196107187,\n    \"store\": \"PLAY_STORE\",\n    \"takehome_percentage\": 8869.776721170148,\n    \"tax_percentage\": 5606.488030512338,\n    \"commission_percentage\": 8786.547288674903,\n    \"type\": \"PRODUCT_CHANGE\",\n    \"expiration_at_ms\": 7929,\n    \"entitlement_ids\": [\n      \"string\",\n      \"string\"\n    ],\n    \"is_trial_conversion\": true,\n    \"offer_code\": \"string\",\n    \"renewal_number\": 8932,\n    \"cancel_reason\": \"UNKNOWN\",\n    \"expiration_reason\": \"PRICE_INCREASE\"\n  },\n  \"api_version\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": {},\n      \"ctx\": {}\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": {},\n      \"ctx\": {}\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "1c2c6fc8-aeb8-49a9-9d77-9c977d6c2b98",
+    "name": "Fast Admin Webhook API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Fast Admin API",
+    "version": "0.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Admin",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Admin Graphql Server",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/admin/graphql"
+          },
+          "docs": "Admin Graphql Server"
+        },
+        {
+          "info": {
+            "name": "Admin Token",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/admin/api/token"
+          },
+          "docs": "Admin Token"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

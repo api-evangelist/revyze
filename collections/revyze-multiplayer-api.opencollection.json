@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Fast Admin Multiplayer API",
+    "version": "0.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Multiplayer",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Devtools Copy",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/multiplayer/devtools/copy",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Devtools Copy"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
