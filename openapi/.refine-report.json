@@ -1,16 +1,7 @@
 {
   "provider": "revyze",
   "sources": [
-    "revyze-admin-api-openapi.yml",
-    "revyze-coach-api-openapi.yml",
-    "revyze-fastapi-api-openapi.yml",
-    "revyze-force-upgrade-app-api-openapi.yml",
-    "revyze-graphql3-api-openapi.yml",
-    "revyze-health-api-openapi.yml",
-    "revyze-multiplayer-api-openapi.yml",
-    "revyze-privacy-policy-api-openapi.yml",
-    "revyze-privacy-policy-en-api-openapi.yml",
-    "revyze-webhook-api-openapi.yml"
+    "_original/revyze-openapi.json"
   ],
   "outputs": [
     "revyze-admin-api-openapi.yml",
@@ -27,6 +18,44 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "revyze-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "revyze-openapi.json: tagged paths GET / -> FastAPI",
+    "revyze-openapi.json: tagged paths GET /health -> Health",
+    "revyze-openapi.json: tagged paths GET /force_upgrade_app -> Force Upgrade App",
+    "revyze-openapi.json: tagged paths GET /graphql3 -> Graphql3",
+    "revyze-openapi.json: tagged paths POST /graphql3 -> Graphql3",
+    "revyze-openapi.json: tagged paths POST /admin/graphql -> Admin",
+    "revyze-openapi.json: tagged paths GET /admin/api/token -> Admin",
+    "revyze-openapi.json: tagged paths GET /privacy_policy -> Privacy Policy",
+    "revyze-openapi.json: tagged paths GET /privacy_policy_en -> Privacy Policy En",
+    "revyze-openapi.json: tagged paths POST /webhook/nima -> Webhook",
+    "revyze-openapi.json: tagged paths POST /webhook/revenuecat -> Webhook",
+    "revyze-openapi.json: tagged paths POST /multiplayer/devtools/copy -> Multiplayer",
+    "revyze-openapi.json: tagged paths POST /coach/stream -> Coach",
+    "revyze-openapi.json: declared missing tag: Admin",
+    "revyze-openapi.json: declared missing tag: Coach",
+    "revyze-openapi.json: declared missing tag: FastAPI",
+    "revyze-openapi.json: declared missing tag: Force Upgrade App",
+    "revyze-openapi.json: declared missing tag: Graphql3",
+    "revyze-openapi.json: declared missing tag: Health",
+    "revyze-openapi.json: declared missing tag: Multiplayer",
+    "revyze-openapi.json: declared missing tag: Privacy Policy",
+    "revyze-openapi.json: declared missing tag: Privacy Policy En",
+    "revyze-openapi.json: declared missing tag: Webhook",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "revyze-admin-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "revyze-coach-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "revyze-fastapi-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "revyze-force-upgrade-app-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "revyze-graphql3-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "revyze-health-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "revyze-multiplayer-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "revyze-privacy-policy-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "revyze-privacy-policy-en-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "revyze-webhook-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
