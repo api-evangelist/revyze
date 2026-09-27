@@ -28,24 +28,6 @@ paths:
       - Multiplayer
 components:
   schemas:
-    HTTPValidationError:
-      properties:
-        detail:
-          items:
-            $ref: '#/components/schemas/ValidationError'
-          type: array
-          title: Detail
-      type: object
-      title: HTTPValidationError
-    DevtoolsCopyRequest:
-      properties:
-        value:
-          type: string
-          title: Value
-      type: object
-      required:
-      - value
-      title: DevtoolsCopyRequest
     ValidationError:
       properties:
         loc:
@@ -72,3 +54,21 @@ components:
       - msg
       - type
       title: ValidationError
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          type: array
+          title: Detail
+      type: object
+      title: HTTPValidationError
+    DevtoolsCopyRequest:
+      properties:
+        value:
+          type: string
+          title: Value
+      type: object
+      required:
+      - value
+      title: DevtoolsCopyRequest
