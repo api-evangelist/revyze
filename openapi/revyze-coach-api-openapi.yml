@@ -31,12 +31,55 @@ paths:
       - Coach
 components:
   schemas:
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+        input:
+          title: Input
+        ctx:
+          type: object
+          title: Context
+      type: object
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
     CoachMaterialType:
       type: string
       enum:
       - IMAGE
       - PDF
       title: CoachMaterialType
+    MaterialInput:
+      properties:
+        filename:
+          type: string
+          title: Filename
+        type:
+          $ref: '#/components/schemas/CoachMaterialType'
+        display_name:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Display Name
+      type: object
+      required:
+      - filename
+      - type
+      title: MaterialInput
     CoachStreamInput:
       properties:
         content:
@@ -67,46 +110,3 @@ components:
           title: Detail
       type: object
       title: HTTPValidationError
-    MaterialInput:
-      properties:
-        filename:
-          type: string
-          title: Filename
-        type:
-          $ref: '#/components/schemas/CoachMaterialType'
-        display_name:
-          anyOf:
-          - type: string
-          - type: 'null'
-          title: Display Name
-      type: object
-      required:
-      - filename
-      - type
-      title: MaterialInput
-    ValidationError:
-      properties:
-        loc:
-          items:
-            anyOf:
-            - type: string
-            - type: integer
-          type: array
-          title: Location
-        msg:
-          type: string
-          title: Message
-        type:
-          type: string
-          title: Error Type
-        input:
-          title: Input
-        ctx:
-          type: object
-          title: Context
-      type: object
-      required:
-      - loc
-      - msg
-      - type
-      title: ValidationError
