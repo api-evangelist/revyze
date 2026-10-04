@@ -31,6 +31,21 @@ paths:
       - Coach
 components:
   schemas:
+    CoachMaterialType:
+      type: string
+      enum:
+      - IMAGE
+      - PDF
+      title: CoachMaterialType
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          type: array
+          title: Detail
+      type: object
+      title: HTTPValidationError
     ValidationError:
       properties:
         loc:
@@ -57,29 +72,6 @@ components:
       - msg
       - type
       title: ValidationError
-    CoachMaterialType:
-      type: string
-      enum:
-      - IMAGE
-      - PDF
-      title: CoachMaterialType
-    MaterialInput:
-      properties:
-        filename:
-          type: string
-          title: Filename
-        type:
-          $ref: '#/components/schemas/CoachMaterialType'
-        display_name:
-          anyOf:
-          - type: string
-          - type: 'null'
-          title: Display Name
-      type: object
-      required:
-      - filename
-      - type
-      title: MaterialInput
     CoachStreamInput:
       properties:
         content:
@@ -101,12 +93,20 @@ components:
       required:
       - content
       title: CoachStreamInput
-    HTTPValidationError:
+    MaterialInput:
       properties:
-        detail:
-          items:
-            $ref: '#/components/schemas/ValidationError'
-          type: array
-          title: Detail
+        filename:
+          type: string
+          title: Filename
+        type:
+          $ref: '#/components/schemas/CoachMaterialType'
+        display_name:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Display Name
       type: object
-      title: HTTPValidationError
+      required:
+      - filename
+      - type
+      title: MaterialInput

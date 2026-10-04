@@ -65,56 +65,21 @@ components:
       - event
       - api_version
       title: RevenueCatWebhookPayload
-    ValidationError:
+    RevenueCatEnvironment:
+      type: string
+      enum:
+      - PRODUCTION
+      - SANDBOX
+      title: RevenueCatEnvironment
+    HTTPValidationError:
       properties:
-        loc:
+        detail:
           items:
-            anyOf:
-            - type: string
-            - type: integer
+            $ref: '#/components/schemas/ValidationError'
           type: array
-          title: Location
-        msg:
-          type: string
-          title: Message
-        type:
-          type: string
-          title: Error Type
-        input:
-          title: Input
-        ctx:
-          type: object
-          title: Context
+          title: Detail
       type: object
-      required:
-      - loc
-      - msg
-      - type
-      title: ValidationError
-    RevenueCatExpirationReason:
-      type: string
-      enum:
-      - UNSUBSCRIBE
-      - BILLING_ERROR
-      - DEVELOPER_INITIATED
-      - PRICE_INCREASE
-      - CUSTOMER_SUPPORT
-      - UNKNOWN
-      title: RevenueCatExpirationReason
-    RevenueCatStore:
-      type: string
-      enum:
-      - AMAZON
-      - APP_STORE
-      - MAC_APP_STORE
-      - PADDLE
-      - PLAY_STORE
-      - PROMOTIONAL
-      - RC_BILLING
-      - ROKU
-      - STRIPE
-      - TEST_STORE
-      title: RevenueCatStore
+      title: HTTPValidationError
     RevenueCatEvent:
       properties:
         product_id:
@@ -216,6 +181,56 @@ components:
       - commission_percentage
       - type
       title: RevenueCatEvent
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+        input:
+          title: Input
+        ctx:
+          type: object
+          title: Context
+      type: object
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
+    RevenueCatStore:
+      type: string
+      enum:
+      - AMAZON
+      - APP_STORE
+      - MAC_APP_STORE
+      - PADDLE
+      - PLAY_STORE
+      - PROMOTIONAL
+      - RC_BILLING
+      - ROKU
+      - STRIPE
+      - TEST_STORE
+      title: RevenueCatStore
+    RevenueCatExpirationReason:
+      type: string
+      enum:
+      - UNSUBSCRIBE
+      - BILLING_ERROR
+      - DEVELOPER_INITIATED
+      - PRICE_INCREASE
+      - CUSTOMER_SUPPORT
+      - UNKNOWN
+      title: RevenueCatExpirationReason
     RevenueCatEventType:
       type: string
       enum:
@@ -237,30 +252,6 @@ components:
       - VIRTUAL_CURRENCY_TRANSACTION
       - EXPERIMENT_ENROLLMENT
       title: RevenueCatEventType
-    RevenueCatEnvironment:
-      type: string
-      enum:
-      - PRODUCTION
-      - SANDBOX
-      title: RevenueCatEnvironment
-    HTTPValidationError:
-      properties:
-        detail:
-          items:
-            $ref: '#/components/schemas/ValidationError'
-          type: array
-          title: Detail
-      type: object
-      title: HTTPValidationError
-    RevenueCatPeriodType:
-      type: string
-      enum:
-      - TRIAL
-      - INTRO
-      - NORMAL
-      - PROMOTIONAL
-      - PREPAID
-      title: RevenueCatPeriodType
     RevenueCatCancellationReason:
       type: string
       enum:
@@ -271,3 +262,12 @@ components:
       - CUSTOMER_SUPPORT
       - UNKNOWN
       title: RevenueCatCancellationReason
+    RevenueCatPeriodType:
+      type: string
+      enum:
+      - TRIAL
+      - INTRO
+      - NORMAL
+      - PROMOTIONAL
+      - PREPAID
+      title: RevenueCatPeriodType
