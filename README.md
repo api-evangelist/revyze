@@ -64,6 +64,123 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Revyze is a company surfaced as a portfolio company of speedinvest and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Revyze is a French EdTech mobile learning application that helps secondary and baccalaureate-level students revise by scrolling short-form educational videos and playing quizzes created by a community of young content creators. The app covers all school subjects and is oriented around exam preparation for the French brevet and baccalaureate, reporting more than two million users, a 4.8/5 app-store rating, and 15,000+ videos, all offered free of charge. Revyze is a portfolio company of Speedinvest. This profile also captures the app's publicly reachable backend at api.revyze.fr — a FastAPI service that fronts a GraphQL API, an AI study-coach streaming endpoint, and subscription/content-moderation webhooks — discovered and harvested by the API Evangelist enrichment pipeline. It is the application's own backend rather than a documented public developer program.
 
-Backed by: speedinvest
+**Areas:** Company · EdTech · Education · Mobile · Video · Learning · Quiz · France · GraphQL
+
+## Revyze on APIs.io
+
+Everything profiled for Revyze is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/revyze/](https://apis.io/providers/revyze/)** — or go straight to one of the APIs or properties below.
+
+### APIs (10)
+
+- [Revyze Admin API](https://apis.io/apis/revyze/revyze-admin-api/) — The Admin API from Revyze — 2 operation(s) for admin.
+- [Revyze Coach API](https://apis.io/apis/revyze/revyze-coach-api/) — The Coach API from Revyze — 1 operation(s) for coach.
+- [Revyze FastAPI API](https://apis.io/apis/revyze/revyze-fastapi-api/) — The FastAPI API from Revyze — 1 operation(s) for fastapi.
+- [Revyze Force Upgrade App API](https://apis.io/apis/revyze/revyze-force-upgrade-app-api/) — The Force Upgrade App API from Revyze — 1 operation(s) for force upgrade app.
+- [Revyze Graphql3 API](https://apis.io/apis/revyze/revyze-graphql3-api/) — The Graphql3 API from Revyze — 1 operation(s) for graphql3.
+- [Revyze Health API](https://apis.io/apis/revyze/revyze-health-api/) — The Health API from Revyze — 1 operation(s) for health.
+- [Revyze Multiplayer API](https://apis.io/apis/revyze/revyze-multiplayer-api/) — The Multiplayer API from Revyze — 1 operation(s) for multiplayer.
+- [Revyze Privacy Policy API](https://apis.io/apis/revyze/revyze-privacy-policy-api/) — The Privacy Policy API from Revyze — 1 operation(s) for privacy policy.
+- [Revyze Privacy Policy En API](https://apis.io/apis/revyze/revyze-privacy-policy-en-api/) — The Privacy Policy En API from Revyze — 1 operation(s) for privacy policy en.
+- [Revyze Webhook API](https://apis.io/apis/revyze/revyze-webhook-api/) — The Webhook API from Revyze — 2 operation(s) for webhook.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Revyze Webhooks](https://apis.io/asyncapis/revyze/revyze-webhooks/)
+
+#### Collections (10)
+
+Postman and Open Collection request collections.
+
+- [Fast Admin API](https://apis.io/collections/revyze/open-revyze-admin-api/)
+- [Fast Admin Coach API](https://apis.io/collections/revyze/open-revyze-coach-api/)
+- [Fast Admin FastAPI API](https://apis.io/collections/revyze/open-revyze-fastapi-api/)
+- [Fast Admin Force Upgrade App API](https://apis.io/collections/revyze/open-revyze-force-upgrade-app-api/)
+- [Fast Admin Graphql3 API](https://apis.io/collections/revyze/open-revyze-graphql3-api/)
+- [Fast Admin Health API](https://apis.io/collections/revyze/open-revyze-health-api/)
+- [Fast Admin Multiplayer API](https://apis.io/collections/revyze/open-revyze-multiplayer-api/)
+- [Fast Admin Privacy Policy API](https://apis.io/collections/revyze/open-revyze-privacy-policy-api/)
+- [Fast Admin Privacy Policy En API](https://apis.io/collections/revyze/open-revyze-privacy-policy-en-api/)
+- [Fast Admin Webhook API](https://apis.io/collections/revyze/open-revyze-webhook-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Revyze Openapi Overlay](https://apis.io/overlays/revyze/revyze-openapi-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Revyze Authentication](https://apis.io/security/revyze/revyze-authentication/)
+- [Revyze Domain Security](https://apis.io/security/revyze/revyze-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.revyze.fr)
+- [Blog](https://revyze.fr/press)
+- [Terms of service](https://api.revyze.fr/privacy_policy)
+- [Privacy policy](https://api.revyze.fr/privacy_policy)
+
+## API Evangelist rating
+
+**Kin Score 25.9** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 43.9 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 14.3 |
+| Access clarity | 21.1 |
+
+**Agent readiness 17.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | derived (partial credit) |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 19.6** — Education & Research
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/revyze/](https://apis.io/providers/revyze/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Revyze: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/revyze/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
